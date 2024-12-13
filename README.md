@@ -40,34 +40,41 @@ dotnet ef database update -c ToDoListWriteDbContext -p .\src\ToDoList.Infrastruc
 
 ## Использование
 
-1) Перейдите в проект Presentation и запустите его или выполните выполните:
+1)
+> Перейдите в проект Presentation и запустите его или выполните выполните:
+![Screenshot](./assets/StartStep1.png)
+![Screenshot](./assets/StartStep2.png)
 ```bash
 dotnet run
 ```
-![Screenshot](./assets/StartStep1.png)
-![Screenshot](./assets/StartStep2.png)
-2) Перейдите на 
+2)
+> Перейдите на:
 ```bash
 http://localhost:5231/swagger/index.html
 ```
-3) Зарегестрируйтесь.
-Введите валидный email address. Пример: "zxc@zxc.zxc".
-Введите пароль. Минимальная длина 5, максимальная длина 64. Пример: "qwerty12345".
-Введите username. Минимальная длина 3, максимальная длина 32, можно использовать только буквы и цифры. Пример: "qwertyzxc123".
+3)
+> Зарегистрируйтесь.
+> Введите валидный email address. Пример: "zxc@zxc.zxc".
+> Введите пароль. Минимальная длина 5, максимальная длина 64. Пример: "qwerty12345".
+> Введите username. Минимальная длина 3, максимальная длина 32, можно использовать только буквы и цифры. Пример: "qwertyzxc123".
 ![Screenshot](./assets/Register.png)
 ![Screenshot](./assets/RegisterResult.png)
 
-4) Авторизуйтесь используя данные введенные ранее.
+4)
+> Авторизуйтесь используя данные введенные ранее.
 ![Screenshot](./assets/Login.png)
 ![Screenshot](./assets/LoginResult.png)
 
-5) Используйте ранее полученный AccessToken.
+5)
+> Используйте ранее полученный AccessToken.
 ![Screenshot](./assets/BearerStep1.png)
 ![Screenshot](./assets/BearerStep2.png)
 
-6) Теперь вы можете использовать данный функционал:
+6)
+> Теперь вы можете использовать данный функционал:
 ![Screenshot](./assets/Features.png)
 
-7) При необходимости воспользуйтесь refresh-tokens и получите новый AccessToken:
+7)
+> При необходимости воспользуйтесь refresh-tokens и получите новый AccessToken:
 ![Screenshot](./assets/RefreshTokens.png)
 ![Screenshot](./assets/RefreshTokensResult.png)
