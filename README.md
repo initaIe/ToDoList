@@ -6,7 +6,7 @@
 
 1. [Установка](#установка)
 2. [Использование](#использование)
-3. [Примеры](#примеры)
+3. [Дополнительная информация](#дополнительная информация)
 
 ## Установка
 
@@ -78,3 +78,8 @@ http://localhost:5231/swagger/index.html
 > При необходимости воспользуйтесь refresh-tokens и получите новый AccessToken:
 ![Screenshot](./assets/RefreshTokens.png)
 ![Screenshot](./assets/RefreshTokensResult.png)
+
+## Дополнительная информация
+
+> При необходимости вы можете изменить: настройки JWTBearer, время жизни рефреш сессии и строку подключения к Sqlite в "appsettings.Development.json"
+
