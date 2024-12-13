@@ -6,7 +6,8 @@
 
 1. [Установка](#установка)
 2. [Использование](#использование)
-3. [Дополнительная информация](#дополнительно)
+3. [Дополнительно](#дополнительно)
+4. [Features](#features)
 
 ## Установка
 
@@ -83,3 +84,16 @@ http://localhost:5231/swagger/index.html
 
 > При необходимости вы можете изменить: настройки JWTBearer, время жизни рефреш сессии и строку подключения к Sqlite в "appsettings.Development.json"
 
+## Features
+
+> POST /api/auth/sessions - Логин, возвращает string AccessToken и guid RefreshToken.
+> POST /api/auth/tokens-renewal - Обновление токенов, возвращает новый string AccessToken и новый guid RefreshToken.
+> POST /api/auth/users - Регистрация, возвращает Guid созданного юзера.
+
+> POST /api/todoitems - Создание, возвращает Guid созданного ToDoItem_а.
+> GET /api/todoitems - Возвращает ToDoItem по его Id.
+> GET /api/todoitems/{id} - Возвращает все ToDoItems.
+> PUT /api/todoitems/{id} - Изменение, возвращает Guid измененного ToDoItem_a.
+> DELETE /api/todoitems/{id} - Регистрация, возвращает Guid удаленного ToDoItem_a.
+
+При дублях, конфликтах и ошибках на стороне сервера возвращает соответствующие статус коды.
