@@ -57,8 +57,11 @@ http://localhost:5231/swagger/index.html
 Зарегистрируйтесь.
 
 Введите валидный email address. Пример: "zxc@zxc.zxc".
+
 Введите пароль. Минимальная длина 5, максимальная длина 64. Пример: "qwerty12345".
+
 Введите username. Минимальная длина 3, максимальная длина 32, можно использовать только буквы и цифры. Пример: "qwertyzxc123".
+
 ![Screenshot](./assets/Register.png)
 ![Screenshot](./assets/RegisterResult.png)
 
