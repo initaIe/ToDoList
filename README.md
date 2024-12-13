@@ -1,48 +1,73 @@
 # ToDoList
 
-ToDoList тестовое задание.
-
-![Screenshot](./assets/zxc.png)  <!-- Пример скриншота -->
+`ToDoList ASP.NET backend` тестовое задание.
 
 ## Содержание
 
-1. [Описание](#описание)
-2. [Установка](#установка)
-3. [Использование](#использование)
-4. [Примеры](#примеры)
-5. [Лицензия](#лицензия)
-
-## Описание
-
-Краткое описание проекта, его функций и особенностей.
+1. [Установка](#установка)
+2. [Использование](#использование)
+3. [Примеры](#примеры)
 
 ## Установка
-
-### Требования
-
-- Укажите, какие зависимости и инструменты необходимы для работы вашего проекта (например, Node.js, Python, .NET и т.д.).
 
 ### Шаги для установки
 
 1. Клонируйте репозиторий:
     ```bash
-    git clone https://github.com/yourusername/your-repository.git
+    git clone https://github.com/initaIe/ToDoList.git
     ```
-2. Установите зависимости:
+2. Перейдите в:
     ```bash
-    npm install  # или другая команда в зависимости от вашего проекта
+    ToDoList\ToDoList.Backend
     ```
-3. Запустите приложение:
+3. Запустите powershell файл для создания мигарций:
     ```bash
-    npm start
+    hard-migrations.ps1
     ```
+Или запустите их в ручную в определенной последовательности:
+1)
+```bash
+dotnet ef database drop -f -c ToDoListWriteDbContext -p .\src\ToDoList.Infrastructure\ -s .\src\ToDoList.Presentation\
+```
+2)
+```bash
+dotnet ef migrations add Init -c ToDoListWriteDbContext -p .\src\ToDoList.Infrastructure\ -s .\src\ToDoList.Presentation\
+```
+3)
+```bash
+dotnet ef database update -c ToDoListWriteDbContext -p .\src\ToDoList.Infrastructure\ -s .\src\ToDoList.Presentation\
+```
 
 ## Использование
 
-Опишите, как использовать ваше приложение после установки. Приведите примеры команд или шагов.
-
-Пример:
-
+1) Перейдите в проект Presentation и запустите его или выполните выполните:
 ```bash
-# Пример команды для запуска приложения
 dotnet run
+```
+![Screenshot](./assets/StartStep1.png)
+![Screenshot](./assets/StartStep2.png)
+2) Перейдите на 
+```bash
+http://localhost:5231/swagger/index.html
+```
+3) Зарегестрируйтесь.
+Введите валидный email address. Пример: "zxc@zxc.zxc".
+Введите пароль. Минимальная длина 5, максимальная длина 64. Пример: "qwerty12345".
+Введите username. Минимальная длина 3, максимальная длина 32, можно использовать только буквы и цифры. Пример: "qwertyzxc123".
+![Screenshot](./assets/Register.png)
+![Screenshot](./assets/RegisterResult.png)
+
+4) Авторизуйтесь используя данные введенные ранее.
+![Screenshot](./assets/Login.png)
+![Screenshot](./assets/LoginResult.png)
+
+5) Используйте ранее полученный AccessToken.
+![Screenshot](./assets/BearerStep1.png)
+![Screenshot](./assets/BearerStep2.png)
+
+6) Теперь вы можете использовать данный функционал:
+![Screenshot](./assets/Features.png)
+
+7) При необходимости воспользуйтесь refresh-tokens и получите новый AccessToken:
+![Screenshot](./assets/RefreshTokens.png)
+![Screenshot](./assets/RefreshTokensResult.png)
